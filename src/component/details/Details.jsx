@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import swal from "sweetalert";
 
 
 const Details = () => {
@@ -19,6 +20,9 @@ const Details = () => {
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
+                if(data.acknowledged == true){
+                    swal("Good job!", "Add To Products Successfull", "success");
+                }
             });
 
     }
