@@ -1,25 +1,29 @@
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../authProvider/AuthProvider";
+import { useContext } from "react";
+import userDefoultPic from '../../assets/user.png'
+import logo from '../../assets/logo3.png'
 
 
 const Navbar = () => {
-    // const { user, logOut } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
-    // const handleSignOut = () =>{
-    //     logOut()
-    //     .then(result =>{
-    //         console.log(result.user);
-    //     })
-    //     .catch(error=>{
-    //         console.error(error)
-    //     })
-    // }
+    const handleSignOut = () =>{
+        logOut()
+        .then(result =>{
+            console.log(result.user);
+        })
+        .catch(error=>{
+            console.error(error)
+        })
+    }
 
     const navLink = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/addproducts'}>Add Product</NavLink></li>
-        <li><NavLink to={'/servic'}>Servic</NavLink></li>
+        <li><NavLink to={'/mycart'}>My Cart</NavLink></li>
         <li><NavLink to={'/login'}>Login</NavLink></li>
-        <li><NavLink to={'/register'}>Register</NavLink></li>
+        {/* <li><NavLink to={'/register'}>Register</NavLink></li> */}
 
     </>
     return (
@@ -33,7 +37,7 @@ const Navbar = () => {
                         {navLink}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl text-yellow-500">CakeCrafters</a>
+               <img className=" h-16" src={logo} alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -42,13 +46,13 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                    {/* {
+                    {
                         user ? <img className=" rounded-full" src={user.photoURL}alt="" /> :<img className=" rounded-full mr-2" src={userDefoultPic} alt="" />
-                    } */}
+                    }
                     
                 </label>
                 {
-                    // user ? <button onClick={handleSignOut} className="btn"> Sign Out </button>:
+                    user ? <button onClick={handleSignOut} className="btn"> Sign Out </button>:
                          <Link to="/login">
                             <button className="btn">Login</button>
                         </Link>
