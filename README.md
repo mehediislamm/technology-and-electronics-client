@@ -1,8 +1,3 @@
-# React + Vite
+- Although I had some initial difficulty understanding and working with this assignment, especially since I was new to databases, it was a challenging experience. Dealing with errors and breaking down the assignment into smaller, manageable parts helped me gradually grasp the concepts.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- I believe that by completing this assignment, I gained valuable knowledge about databases. I hope to apply this newfound knowledge to future assignments and projects. Overall, it was a rewarding experience for me.
