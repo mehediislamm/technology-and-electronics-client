@@ -18,7 +18,7 @@ const AddProducts = () => {
             image_one, name, type, price, description, brand_name, rating
         }
         console.log(formData);
-        fetch(" /productsBrand", {
+        fetch("https://brand-shop-a5v2vn1az-mehediislamm.vercel.app/productsBrand", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -28,7 +28,7 @@ const AddProducts = () => {
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
-                if(data.acknowledged == true){
+                if (data.acknowledged == true) {
                     swal("Good job!", "Added Producted Successfull", "success");
                 }
             });
@@ -67,9 +67,18 @@ const AddProducts = () => {
                         <label className="label">
                             <span className="label-text">Type</span>
                         </label>
-                        <label className="input-group">
+                        {/* <label className="input-group">
                             <input type="text" name="type" placeholder="Type" className="input input-bordered w-full" />
-                        </label>
+                        </label> */}
+                        <select name="type" className="select select-bordered w-full ">
+                            
+                            <option>Headphone</option>
+                            <option>Smart phone</option>
+                            <option>Accessories</option>
+                            <option> Desktop</option>
+                            <option>Laptop</option>
+                            <option>Gadget</option>
+                        </select>
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
                         <label className="label">

@@ -3,7 +3,7 @@
 // import { useState } from "react";
 import swal from "sweetalert";
 
-const AddMyCard = ({ mycard }) => {
+const AddMyCard = ({ mycard, setUpdate, cardData }) => {
     const { image_one, name, } = mycard;
     console.log(mycard);
     
@@ -19,9 +19,11 @@ const AddMyCard = ({ mycard }) => {
             .then((data) => {
                 console.log(data);
 
-                if (data.acknowledged == true) {
-                    // const filterdata = updateProduct.filter((item) => item._id !== _id);
-                    // setUpdatedProduct(filterdata)
+                const filterdata = cardData.filter((item) => item._id !== _id);
+                setUpdate(filterdata)
+
+                if (data.deletedCount > 0) {
+                   
                     swal("Delete!", "Delete Products Successfull", "error");
                 }
             });
