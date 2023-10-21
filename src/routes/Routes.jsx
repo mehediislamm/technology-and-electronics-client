@@ -10,6 +10,7 @@ import AllCards from "../component/allCards/AllCards";
 import Details from "../component/details/Details";
 import Cards from "../component/cards/Cards";
 import MyCart from "../component/myCart/MyCart";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/addproducts',
-        element: <AddProducts></AddProducts>
+        element: <PrivateRoute><AddProducts></AddProducts></PrivateRoute>
       },
       {
         path: '/mycart/:id',
