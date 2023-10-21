@@ -10,7 +10,7 @@ const firebaseConfig = {
   projectId: "technology-and-electroni-18366",
   storageBucket: "technology-and-electroni-18366.appspot.com",
   messagingSenderId: "622339579608",
-  appId: "1:622339579608:web:df3766dae67d7d9b0841ad"
+  appId: "1:622339579608:web:df3766dae67d7d9b0841ad",
 };
 
 // Initialize Firebase

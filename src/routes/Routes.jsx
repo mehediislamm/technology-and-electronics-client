@@ -23,18 +23,18 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch(`http://localhost:5000/allCards`),
+        loader: () => fetch(`https://brand-shop-ky46ie1gc-mehediislamm.vercel.app/allCards`),
       },
       {
         path: '/addproducts',
         element: <PrivateRoute><AddProducts></AddProducts></PrivateRoute>
       },
       {
-        path: '/mycart/:id',
-        element: <MyCart></MyCart>,
-        loader: ({ params }) => {
-          console.log(params);
-          return fetch (`http://localhost:5000/addCard/${params.id}`)
+        path: '/mycart',
+        element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
+        loader: () => {
+          
+          return fetch (`https://brand-shop-ky46ie1gc-mehediislamm.vercel.app/addCard`)
         }
       },
       {
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
         element: <UpdateProducts></UpdateProducts>,
         loader: ({ params }) => {
           console.log(params);
-          return fetch(`http://localhost:5000/productsBrand/${params.id}`)
+          return fetch(`https://brand-shop-ky46ie1gc-mehediislamm.vercel.app/productsBrand/${params.id}`)
         }
       },
 
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
         element: <AllCards></AllCards>,
         loader: ({ params }) => {
           console.log(params);
-          return fetch(`http://localhost:5000/brand/${params.brand_name}`)
+          return fetch(`https://brand-shop-ky46ie1gc-mehediislamm.vercel.app/brand/${params.brand_name}`)
         }
       },
       {
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <Details></Details>,
-        loader: ({ params }) => fetch(`http://localhost:5000/productsBrand/${params.id}`)
+        loader: ({ params }) => fetch(`https://brand-shop-ky46ie1gc-mehediislamm.vercel.app/productsBrand/${params.id}`)
       },
 
     ]

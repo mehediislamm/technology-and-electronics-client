@@ -1,0 +1,14 @@
+# Query: https://brand-shop-ky46ie1gc-mehediislamm.vercel.app
+# Flags: CaseSensitive
+
+6 results - 2 files
+
+src\component\updateProducts\UpdateProducts.jsx:
+  29:         fetch(`https://brand-shop-ky46ie1gc-mehediislamm.vercel.app/productsBrand/${singleProducts._id}`, {
+
+src\routes\Routes.jsx:
+  26:         loader: () => fetch(`https://brand-shop-ky46ie1gc-mehediislamm.vercel.app/allCards`),
+  37:           return fetch (`https://brand-shop-ky46ie1gc-mehediislamm.vercel.app/addCard`)
+  53:           return fetch(`https://brand-shop-ky46ie1gc-mehediislamm.vercel.app/productsBrand/${params.id}`)
+  62:           return fetch(`https://brand-shop-ky46ie1gc-mehediislamm.vercel.app/brand/${params.brand_name}`)
+  72:         loader: ({ params }) => fetch(`https://brand-shop-ky46ie1gc-mehediislamm.vercel.app/productsBrand/${params.id}`)

@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import {  useLoaderData } from "react-router-dom";
 import swal from "sweetalert";
 
 
@@ -10,7 +10,7 @@ const Details = () => {
         const myData = {
             image_one, name, description
         }
-        fetch("http://localhost:5000/addCard", {
+        fetch("https://brand-shop-a5v2vn1az-mehediislamm.vercel.app/addCard",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
