@@ -61,7 +61,7 @@ const Navbar = () => {
                     {navLink}
                 </ul>
             </div>
-            <div className="navbar-end gap-8">
+            <div className="navbar-end gap-4 md:gap-8">
                 <label className="swap swap-rotate">
 
                     {/* this hidden checkbox controls the state */}
