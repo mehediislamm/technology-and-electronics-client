@@ -7,3 +7,5 @@
 - It is an Technology and Electronics website where clients can buy products from brands like Apple, Samsung, Intel, Lava, and Google.
 
 - Please note that while I've translated the text to English, some context about the specific assignment or website is missing, so feel free to provide additional details if needed.
+
+[Live site](https://technology-and-electroni-18366.web.app)
